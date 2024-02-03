@@ -2,7 +2,7 @@
 
 module Shopify
   module DefaultVariant
-    VERSION = "0.0.1"
+    VERSION = "0.0.2"
     TITLE = "Default Title"
 
     class Object
@@ -31,7 +31,7 @@ module Shopify
         match &&= (object.option1.nil? || object.option1 == DefaultVariant::TITLE)
         return match unless object.respond_to?(:option2)
 
-        match && (object.option2.nil? || object.option2 == DefaultVariant::TITLE)
+        match && object.option2.nil?
       end
     end
 

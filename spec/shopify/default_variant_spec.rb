@@ -294,7 +294,7 @@ RSpec.describe Shopify::DefaultVariant do
           hash["option2"] = nil
           expect(described_class.match?(hash)).to be true
 
-          hash["option2"] = "Other"
+          hash["option2"] = "Default Title"
           expect(described_class.match?(hash)).to be false
         end
       end

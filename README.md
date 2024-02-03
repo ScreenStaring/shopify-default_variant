@@ -32,9 +32,8 @@ Shopify::DefaultVariant.match?(product.variants.sample)
 require "shopify_api-graphql-tiny"
 
 gql = ShopifyAPI::GraphQL::Tiny.new("shop", "token")
-
 data = gql.execute(YOUR_QUERY)
-# Be sure to remove the data key and query's name key (whatever it may be)
+# Be sure to remove the data key and query's name key (whatever it may be) from the response hash
 Shopify::DefaultVariant.match?(data.dig("data", "queryName"))
 
 # Or use a Object or Hash that resembles one of the well-known forms

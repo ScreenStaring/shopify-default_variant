@@ -1,5 +1,7 @@
 # Shopify::DefaultVariant
 
+[![CI](https://github.com/ScreenStaring/shopify-default_variant/actions/workflows/ci.yml/badge.svg)](https://github.com/ScreenStaring/shopify-default_variant/actions/workflows/ci.yml)
+
 Determine if the given Shopify product only has a default variant, or if the given variant is the default variant.
 
 Works with a variety of objects:
@@ -20,7 +22,7 @@ Where `object` can be a product or a variant in any of the aforementioned forms.
 More examples:
 
 ```rb
-require "shopify_api"
+require "shopify_api"  # Just an example, *not* a recommendation 😉
 
 product = ShopifyAPI::Product.find(id: id)
 Shopify::DefaultVariant.match?(product)

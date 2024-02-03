@@ -1,0 +1,530 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<Host>/admin/api/graphql.json
+    body:
+      encoding: UTF-8
+      string: '{"query":"  mutation productCreate($input: ProductInput!) {\n    productCreate(input:
+        $input) {\n      product {\n        id\n      }\n      userErrors {\n        field\n        message\n      }\n    }\n  }\n","variables":{"input":{"title":"Shopify::DefaultVariant
+        Test Product Without Variants"}}}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - ShopifyAPI::GraphQL::Tiny v0.1.1 (Ruby v3.1.3)
+      Content-Type:
+      - application/json
+      X-Shopify-Access-Token:
+      - "<X-Shopify-Access-Token>"
+      X-Graphql-Cost-Include-Fields:
+      - 'true'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 03 Feb 2024 21:01:46 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Sorting-Hat-Podid:
+      - '52'
+      X-Sorting-Hat-Shopid:
+      - '10671028'
+      Vary:
+      - Accept-Encoding
+      Referrer-Policy:
+      - origin-when-cross-origin
+      X-Frame-Options:
+      - DENY
+      X-Shopid:
+      - '10671028'
+      X-Shardid:
+      - '52'
+      X-Stats-Userid:
+      - ''
+      X-Stats-Apiclientid:
+      - '68005003265'
+      X-Stats-Apipermissionid:
+      - '395760533557'
+      X-Shopify-Api-Version:
+      - 2023-04
+      Content-Language:
+      - en
+      Strict-Transport-Security:
+      - max-age=7889238
+      Server-Timing:
+      - cfRequestDuration;dur=328.000069
+      - processing;dur=272, graphql;desc="admin/mutation/other"
+      X-Shopify-Stage:
+      - production
+      Content-Security-Policy:
+      - 'default-src ''self'' data: blob: ''unsafe-inline'' ''unsafe-eval'' https://*
+        shopify-pos://*; block-all-mixed-content; child-src ''self'' https://* shopify-pos://*;
+        connect-src ''self'' wss://* https://*; frame-ancestors ''none''; img-src
+        ''self'' data: blob: https:; script-src https://cdn.shopify.com https://cdn.shopifycdn.net
+        https://checkout.shopifycs.com https://api.stripe.com https://mpsnare.iesnare.com
+        https://appcenter.intuit.com https://www.paypal.com https://js.braintreegateway.com
+        https://c.paypal.com https://maps.googleapis.com https://www.google-analytics.com
+        https://v.shopify.com ''self'' ''unsafe-inline'' ''unsafe-eval''; upgrade-insecure-requests;
+        report-uri /csp-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=admin%2Fgraphql&source%5Bsection%5D=admin_api&source%5Buuid%5D=1342b6b5-8601-41fb-9366-e44539861441'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - 1; mode=block; report=/xss-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=admin%2Fgraphql&source%5Bsection%5D=admin_api&source%5Buuid%5D=1342b6b5-8601-41fb-9366-e44539861441
+      X-Envoy-Upstream-Service-Time:
+      - '274'
+      X-Dc:
+      - gcp-us-east4,gcp-us-central1
+      X-Request-Id:
+      - 1342b6b5-8601-41fb-9366-e44539861441
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=u4GFvyEuCCWfo2FOR8Z1Kn9qEQB7ldvBnz1hJ0AOFDlyIskS1yTZ67i2AvDiDdrh1T90VERak0T3NF73RL3LbOYf0YZFaiAfgnzBReDRSTt%2B8bGdK3raaG8%2BC8QjX0jCOqjHKcmdZxAE"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 84fd9c6958dd060f-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"productCreate":{"product":{"id":"gid://shopify/Product/7352959303733"},"userErrors":[]}},"extensions":{"cost":{"requestedQueryCost":10,"actualQueryCost":10,"throttleStatus":{"maximumAvailable":2000.0,"currentlyAvailable":1990,"restoreRate":100.0},"fields":[{"path":["productCreate","product","id"],"definedCost":0,"requestedTotalCost":0,"requestedChildrenCost":null},{"path":["productCreate","product"],"definedCost":0,"requestedTotalCost":0,"requestedChildrenCost":0},{"path":["productCreate","userErrors","field"],"definedCost":0,"requestedTotalCost":0,"requestedChildrenCost":null},{"path":["productCreate","userErrors","message"],"definedCost":0,"requestedTotalCost":0,"requestedChildrenCost":null},{"path":["productCreate","userErrors"],"definedCost":0,"requestedTotalCost":0,"requestedChildrenCost":0},{"path":["productCreate"],"definedCost":10,"requestedTotalCost":10,"requestedChildrenCost":0}]}}}'
+  recorded_at: Sat, 03 Feb 2024 21:02:39 GMT
+- request:
+    method: post
+    uri: https://<Host>/admin/api/graphql.json
+    body:
+      encoding: UTF-8
+      string: '{"query":"  mutation productCreate($input: ProductInput!) {\n    productCreate(input:
+        $input) {\n      product {\n        id\n      }\n      userErrors {\n        field\n        message\n      }\n    }\n  }\n","variables":{"input":{"title":"Shopify::DefaultVariant
+        Test Product With Variants","options":["Color"],"variants":[{"title":"Variant
+        1","options":["Red"]}]}}}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - ShopifyAPI::GraphQL::Tiny v0.1.1 (Ruby v3.1.3)
+      Content-Type:
+      - application/json
+      X-Shopify-Access-Token:
+      - "<X-Shopify-Access-Token>"
+      X-Graphql-Cost-Include-Fields:
+      - 'true'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 03 Feb 2024 21:01:46 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Sorting-Hat-Podid:
+      - '52'
+      X-Sorting-Hat-Shopid:
+      - '10671028'
+      Vary:
+      - Accept-Encoding
+      Referrer-Policy:
+      - origin-when-cross-origin
+      X-Frame-Options:
+      - DENY
+      X-Shopid:
+      - '10671028'
+      X-Shardid:
+      - '52'
+      X-Stats-Userid:
+      - ''
+      X-Stats-Apiclientid:
+      - '68005003265'
+      X-Stats-Apipermissionid:
+      - '395760533557'
+      X-Shopify-Api-Version:
+      - 2023-04
+      Content-Language:
+      - en
+      X-Shopify-Api-Deprecated-Reason:
+      - https://shopify.dev/api/usage/versioning#deprecation-practices
+      Strict-Transport-Security:
+      - max-age=7889238
+      Server-Timing:
+      - cfRequestDuration;dur=402.000189
+      - processing;dur=342, graphql;desc="admin/mutation/other"
+      X-Shopify-Stage:
+      - production
+      Content-Security-Policy:
+      - 'default-src ''self'' data: blob: ''unsafe-inline'' ''unsafe-eval'' https://*
+        shopify-pos://*; block-all-mixed-content; child-src ''self'' https://* shopify-pos://*;
+        connect-src ''self'' wss://* https://*; frame-ancestors ''none''; img-src
+        ''self'' data: blob: https:; script-src https://cdn.shopify.com https://cdn.shopifycdn.net
+        https://checkout.shopifycs.com https://api.stripe.com https://mpsnare.iesnare.com
+        https://appcenter.intuit.com https://www.paypal.com https://js.braintreegateway.com
+        https://c.paypal.com https://maps.googleapis.com https://www.google-analytics.com
+        https://v.shopify.com ''self'' ''unsafe-inline'' ''unsafe-eval''; upgrade-insecure-requests;
+        report-uri /csp-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=admin%2Fgraphql&source%5Bsection%5D=admin_api&source%5Buuid%5D=d977e7ee-d8ea-4cb0-8cfc-a0c2f9634d1a'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - 1; mode=block; report=/xss-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=admin%2Fgraphql&source%5Bsection%5D=admin_api&source%5Buuid%5D=d977e7ee-d8ea-4cb0-8cfc-a0c2f9634d1a
+      X-Envoy-Upstream-Service-Time:
+      - '346'
+      X-Dc:
+      - gcp-us-east4,gcp-us-central1
+      X-Request-Id:
+      - d977e7ee-d8ea-4cb0-8cfc-a0c2f9634d1a
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=YQJjOJeobe4T6tEqyfmL33sVOmrtpo3SUkUZcQCS%2B5uTm%2Bfzm3nlmnm%2Fw4dL50BCG0o%2B3t34HI7lh6PXPl4iszie03SBwu1ec7YqEe3ACuEXZ4QOl2gVcmax3EYsOYRvIrb5cRLLhoR3"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 84fd9c6bcdd4063b-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"productCreate":{"product":{"id":"gid://shopify/Product/7352959336501"},"userErrors":[]}},"extensions":{"cost":{"requestedQueryCost":10,"actualQueryCost":10,"throttleStatus":{"maximumAvailable":2000.0,"currentlyAvailable":1990,"restoreRate":100.0},"fields":[{"path":["productCreate","product","id"],"definedCost":0,"requestedTotalCost":0,"requestedChildrenCost":null},{"path":["productCreate","product"],"definedCost":0,"requestedTotalCost":0,"requestedChildrenCost":0},{"path":["productCreate","userErrors","field"],"definedCost":0,"requestedTotalCost":0,"requestedChildrenCost":null},{"path":["productCreate","userErrors","message"],"definedCost":0,"requestedTotalCost":0,"requestedChildrenCost":null},{"path":["productCreate","userErrors"],"definedCost":0,"requestedTotalCost":0,"requestedChildrenCost":0},{"path":["productCreate"],"definedCost":10,"requestedTotalCost":10,"requestedChildrenCost":0}]}}}'
+  recorded_at: Sat, 03 Feb 2024 21:02:40 GMT
+- request:
+    method: post
+    uri: https://<Host>/admin/api/graphql.json
+    body:
+      encoding: UTF-8
+      string: '{"query":"            query {\n              product(id: \"gid://shopify/Product/7352959303733\")
+        {\n                variants(first: 10) {\n                  edges {\n                    node
+        {\n                      title\n                      selectedOptions {\n                        name\n                        value\n                      }\n                    }\n                  }\n                }\n              }\n            }\n"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - ShopifyAPI::GraphQL::Tiny v0.1.1 (Ruby v3.1.3)
+      Content-Type:
+      - application/json
+      X-Shopify-Access-Token:
+      - "<X-Shopify-Access-Token>"
+      X-Graphql-Cost-Include-Fields:
+      - 'true'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 03 Feb 2024 21:01:46 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Sorting-Hat-Podid:
+      - '52'
+      X-Sorting-Hat-Shopid:
+      - '10671028'
+      Vary:
+      - Accept-Encoding
+      Referrer-Policy:
+      - origin-when-cross-origin
+      X-Frame-Options:
+      - DENY
+      X-Shopid:
+      - '10671028'
+      X-Shardid:
+      - '52'
+      X-Stats-Userid:
+      - ''
+      X-Stats-Apiclientid:
+      - '68005003265'
+      X-Stats-Apipermissionid:
+      - '395760533557'
+      X-Shopify-Api-Version:
+      - 2023-04
+      Content-Language:
+      - en
+      Strict-Transport-Security:
+      - max-age=7889238
+      Server-Timing:
+      - cfRequestDuration;dur=131.999969
+      - processing;dur=74, graphql;desc="admin/query/other"
+      X-Shopify-Stage:
+      - production
+      Content-Security-Policy:
+      - 'default-src ''self'' data: blob: ''unsafe-inline'' ''unsafe-eval'' https://*
+        shopify-pos://*; block-all-mixed-content; child-src ''self'' https://* shopify-pos://*;
+        connect-src ''self'' wss://* https://*; frame-ancestors ''none''; img-src
+        ''self'' data: blob: https:; script-src https://cdn.shopify.com https://cdn.shopifycdn.net
+        https://checkout.shopifycs.com https://api.stripe.com https://mpsnare.iesnare.com
+        https://appcenter.intuit.com https://www.paypal.com https://js.braintreegateway.com
+        https://c.paypal.com https://maps.googleapis.com https://www.google-analytics.com
+        https://v.shopify.com ''self'' ''unsafe-inline'' ''unsafe-eval''; upgrade-insecure-requests;
+        report-uri /csp-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=admin%2Fgraphql&source%5Bsection%5D=admin_api&source%5Buuid%5D=2749e60b-5c74-422d-8922-cc38934d2d57'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - 1; mode=block; report=/xss-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=admin%2Fgraphql&source%5Bsection%5D=admin_api&source%5Buuid%5D=2749e60b-5c74-422d-8922-cc38934d2d57
+      X-Envoy-Upstream-Service-Time:
+      - '76'
+      X-Dc:
+      - gcp-us-east4,gcp-us-central1
+      X-Request-Id:
+      - 2749e60b-5c74-422d-8922-cc38934d2d57
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=hDJshpPBHztNG3FHwgtP9ASfUAsuNzqlZhbmMJvPBW%2FJ6VmQpfWoylq1jD7LHRhgqmXzONUg64VvnkxyBsPE4smzRBIJ4M60%2BcdLwkl3%2BpuWiGEBbAnlH5OKxtDqXXSQvzxjWRFGr3T9"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 84fd9c6eab9105d5-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"product":{"variants":{"edges":[{"node":{"title":"Default
+        Title","selectedOptions":[{"name":"Title","value":"Default Title"}]}}]}}},"extensions":{"cost":{"requestedQueryCost":11,"actualQueryCost":5,"throttleStatus":{"maximumAvailable":2000.0,"currentlyAvailable":1995,"restoreRate":100.0},"fields":[{"path":["product","variants","edges","node","title"],"definedCost":0,"requestedTotalCost":0,"requestedChildrenCost":null},{"path":["product","variants","edges","node","selectedOptions","name"],"definedCost":0,"requestedTotalCost":0,"requestedChildrenCost":null},{"path":["product","variants","edges","node","selectedOptions","value"],"definedCost":0,"requestedTotalCost":0,"requestedChildrenCost":null},{"path":["product","variants","edges","node","selectedOptions"],"definedCost":1,"requestedTotalCost":1,"requestedChildrenCost":0},{"path":["product","variants","edges","node"],"definedCost":1,"requestedTotalCost":2,"requestedChildrenCost":1},{"path":["product","variants","edges"],"definedCost":0,"requestedTotalCost":2,"requestedChildrenCost":2},{"path":["product","variants"],"definedCost":null,"requestedTotalCost":10,"requestedChildrenCost":2},{"path":["product"],"definedCost":1,"requestedTotalCost":11,"requestedChildrenCost":10}]}}}'
+  recorded_at: Sat, 03 Feb 2024 21:02:40 GMT
+- request:
+    method: post
+    uri: https://<Host>/admin/api/graphql.json
+    body:
+      encoding: UTF-8
+      string: '{"query":"  mutation productDelete($input: ProductDeleteInput!) {\n    productDelete(input:
+        $input) {\n      userErrors {\n        field\n        message\n      }\n    }\n  }\n","variables":{"input":{"id":"gid://shopify/Product/7352959303733"}}}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - ShopifyAPI::GraphQL::Tiny v0.1.1 (Ruby v3.1.3)
+      Content-Type:
+      - application/json
+      X-Shopify-Access-Token:
+      - "<X-Shopify-Access-Token>"
+      X-Graphql-Cost-Include-Fields:
+      - 'true'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 03 Feb 2024 21:01:47 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Sorting-Hat-Podid:
+      - '52'
+      X-Sorting-Hat-Shopid:
+      - '10671028'
+      Vary:
+      - Accept-Encoding
+      Referrer-Policy:
+      - origin-when-cross-origin
+      X-Frame-Options:
+      - DENY
+      X-Shopid:
+      - '10671028'
+      X-Shardid:
+      - '52'
+      X-Stats-Userid:
+      - ''
+      X-Stats-Apiclientid:
+      - '68005003265'
+      X-Stats-Apipermissionid:
+      - '395760533557'
+      X-Shopify-Api-Version:
+      - 2023-04
+      Content-Language:
+      - en
+      Strict-Transport-Security:
+      - max-age=7889238
+      Server-Timing:
+      - cfRequestDuration;dur=464.999914
+      - processing;dur=411, graphql;desc="admin/mutation/other"
+      X-Shopify-Stage:
+      - production
+      Content-Security-Policy:
+      - 'default-src ''self'' data: blob: ''unsafe-inline'' ''unsafe-eval'' https://*
+        shopify-pos://*; block-all-mixed-content; child-src ''self'' https://* shopify-pos://*;
+        connect-src ''self'' wss://* https://*; frame-ancestors ''none''; img-src
+        ''self'' data: blob: https:; script-src https://cdn.shopify.com https://cdn.shopifycdn.net
+        https://checkout.shopifycs.com https://api.stripe.com https://mpsnare.iesnare.com
+        https://appcenter.intuit.com https://www.paypal.com https://js.braintreegateway.com
+        https://c.paypal.com https://maps.googleapis.com https://www.google-analytics.com
+        https://v.shopify.com ''self'' ''unsafe-inline'' ''unsafe-eval''; upgrade-insecure-requests;
+        report-uri /csp-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=admin%2Fgraphql&source%5Bsection%5D=admin_api&source%5Buuid%5D=1e17bf6e-528c-422e-a3e2-1a348548b508'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - 1; mode=block; report=/xss-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=admin%2Fgraphql&source%5Bsection%5D=admin_api&source%5Buuid%5D=1e17bf6e-528c-422e-a3e2-1a348548b508
+      X-Envoy-Upstream-Service-Time:
+      - '413'
+      X-Dc:
+      - gcp-us-east4,gcp-us-central1
+      X-Request-Id:
+      - 1e17bf6e-528c-422e-a3e2-1a348548b508
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=a6guKOBccm4MPBya2n888WpE3wzxNGpc7R86ndKYCjtR5Lit%2FCmOQ%2FIRFPEyFpVM6ixbqUqEKJdrPHtzBVu8qSJLyH1dYqYcDm%2Fd8WvBo%2BF6FyyYUY8yG0J78Iw%2Be4OwM7uR%2FGia9qJd"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 84fd9c6fccf59c8b-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"productDelete":{"userErrors":[]}},"extensions":{"cost":{"requestedQueryCost":10,"actualQueryCost":10,"throttleStatus":{"maximumAvailable":2000.0,"currentlyAvailable":1990,"restoreRate":100.0},"fields":[{"path":["productDelete","userErrors","field"],"definedCost":0,"requestedTotalCost":0,"requestedChildrenCost":null},{"path":["productDelete","userErrors","message"],"definedCost":0,"requestedTotalCost":0,"requestedChildrenCost":null},{"path":["productDelete","userErrors"],"definedCost":0,"requestedTotalCost":0,"requestedChildrenCost":0},{"path":["productDelete"],"definedCost":10,"requestedTotalCost":10,"requestedChildrenCost":0}]}}}'
+  recorded_at: Sat, 03 Feb 2024 21:02:41 GMT
+- request:
+    method: post
+    uri: https://<Host>/admin/api/graphql.json
+    body:
+      encoding: UTF-8
+      string: '{"query":"  mutation productDelete($input: ProductDeleteInput!) {\n    productDelete(input:
+        $input) {\n      userErrors {\n        field\n        message\n      }\n    }\n  }\n","variables":{"input":{"id":"gid://shopify/Product/7352959336501"}}}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - ShopifyAPI::GraphQL::Tiny v0.1.1 (Ruby v3.1.3)
+      Content-Type:
+      - application/json
+      X-Shopify-Access-Token:
+      - "<X-Shopify-Access-Token>"
+      X-Graphql-Cost-Include-Fields:
+      - 'true'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 03 Feb 2024 21:01:47 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Sorting-Hat-Podid:
+      - '52'
+      X-Sorting-Hat-Shopid:
+      - '10671028'
+      Vary:
+      - Accept-Encoding
+      Referrer-Policy:
+      - origin-when-cross-origin
+      X-Frame-Options:
+      - DENY
+      X-Shopid:
+      - '10671028'
+      X-Shardid:
+      - '52'
+      X-Stats-Userid:
+      - ''
+      X-Stats-Apiclientid:
+      - '68005003265'
+      X-Stats-Apipermissionid:
+      - '395760533557'
+      X-Shopify-Api-Version:
+      - 2023-04
+      Content-Language:
+      - en
+      Strict-Transport-Security:
+      - max-age=7889238
+      Server-Timing:
+      - cfRequestDuration;dur=595.999956
+      - processing;dur=540, graphql;desc="admin/mutation/other"
+      X-Shopify-Stage:
+      - production
+      Content-Security-Policy:
+      - 'default-src ''self'' data: blob: ''unsafe-inline'' ''unsafe-eval'' https://*
+        shopify-pos://*; block-all-mixed-content; child-src ''self'' https://* shopify-pos://*;
+        connect-src ''self'' wss://* https://*; frame-ancestors ''none''; img-src
+        ''self'' data: blob: https:; script-src https://cdn.shopify.com https://cdn.shopifycdn.net
+        https://checkout.shopifycs.com https://api.stripe.com https://mpsnare.iesnare.com
+        https://appcenter.intuit.com https://www.paypal.com https://js.braintreegateway.com
+        https://c.paypal.com https://maps.googleapis.com https://www.google-analytics.com
+        https://v.shopify.com ''self'' ''unsafe-inline'' ''unsafe-eval''; upgrade-insecure-requests;
+        report-uri /csp-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=admin%2Fgraphql&source%5Bsection%5D=admin_api&source%5Buuid%5D=19214403-86d1-4921-8621-b991f53e206e'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - 1; mode=block; report=/xss-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=admin%2Fgraphql&source%5Bsection%5D=admin_api&source%5Buuid%5D=19214403-86d1-4921-8621-b991f53e206e
+      X-Envoy-Upstream-Service-Time:
+      - '542'
+      X-Dc:
+      - gcp-us-east4,gcp-us-central1
+      X-Request-Id:
+      - 19214403-86d1-4921-8621-b991f53e206e
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ElnA7foK4%2FWqVu3YAbld1qq406fz5sDR4I9Uii1ctm4wEY%2BbXUBrlLDlpE89IH2uHW8GT5th%2Fv6K1Fp9V5jGl4feE8nSLYh6uLei8IFpyzSZUfiWPCH7zb%2F48UW25dlPBW7FMk6mFctA"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 84fd9c730e1f07f9-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"productDelete":{"userErrors":[]}},"extensions":{"cost":{"requestedQueryCost":10,"actualQueryCost":10,"throttleStatus":{"maximumAvailable":2000.0,"currentlyAvailable":1990,"restoreRate":100.0},"fields":[{"path":["productDelete","userErrors","field"],"definedCost":0,"requestedTotalCost":0,"requestedChildrenCost":null},{"path":["productDelete","userErrors","message"],"definedCost":0,"requestedTotalCost":0,"requestedChildrenCost":null},{"path":["productDelete","userErrors"],"definedCost":0,"requestedTotalCost":0,"requestedChildrenCost":0},{"path":["productDelete"],"definedCost":10,"requestedTotalCost":10,"requestedChildrenCost":0}]}}}'
+  recorded_at: Sat, 03 Feb 2024 21:02:41 GMT
+recorded_with: VCR 6.2.0

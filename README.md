@@ -11,6 +11,26 @@ Works with a variety of objects:
 - Plain Ol' Ruby Object (PORO)
 - Plain `Hash` with `String` or `Symbol` keys
 
+## Installation
+
+Add this line to your application's `Gemfile`:
+
+```ruby
+gem "shopify-default_variant"
+```
+
+And then execute:
+
+```sh
+bundle
+```
+
+Or install it yourself as:
+
+```sh
+gem install shopify-default_variant
+```
+
 ## Usage
 
 ```rb
@@ -22,6 +42,7 @@ Where `object` can be a product or a variant in any of the aforementioned forms.
 More examples:
 
 ```rb
+require "shopify-default_variant"
 require "shopify_api"  # Just an example, *not* a recommendation 😉
 
 product = ShopifyAPI::Product.find(id: id)
